@@ -8,49 +8,108 @@
 </head>
 
 <body>
-    <h1>Other Katas not included in separate files</h1>
+<h1>Other Katas not included in separate files</h1>
 
-    <script>
+<script>
 
-        // Did she say hallo?
+    // Did she say hallo?
 
-        // DESCRIPTION:
+    // DESCRIPTION:
 
-        // You received a whatsup message from an unknown number. 
-        // Could it be from that girl/boy with a foreign accent you met yesterday evening?
+    // You received a whatsup message from an unknown number.
+    // Could it be from that girl/boy with a foreign accent you met yesterday evening?
 
-        // Write a simple function to check if the string contains the word hallo in different languages.
+    // Write a simple function to check if the string contains the word hallo in different languages.
 
-        // These are the languages of the possible people you met the night before:
+    // These are the languages of the possible people you met the night before:
 
-        // hello - english
-        // ciao - italian
-        // salut - french
-        // hallo - german
-        // hola - spanish
-        // ahoj - czech republic
-        // czesc - polish
+    // hello - english
+    // ciao - italian
+    // salut - french
+    // hallo - german
+    // hola - spanish
+    // ahoj - czech republic
+    // czesc - polish
 
-        // Notes
+    // Notes
 
-        // you can assume the input is a string.
-        // to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
-        // function should be case insensitive to pass the tests
-
-
-        // My Solution with RegExp
-
-        const validateHello = (greet) => /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greet)
+    // you can assume the input is a string.
+    // to keep this a beginner exercise you don't need to check if the greeting is a subset of word (Hallowen can pass the test)
+    // function should be case insensitive to pass the tests
 
 
-        console.log(validateHello("qjfhqk hallo qsdflkjlkj"));
+    // My Solution with RegExp
+
+    const validateHello = (greet) => /hello|ciao|salut|hallo|hola|ahoj|czesc/i.test(greet)
 
 
+    // console.log(validateHello("qjfhqk hallo qsdflkjlkj"));
 
-        
-        //
 
-    </script>
+    // How good are you really?
+
+    // There was a test in your class and you passed it. Congratulations!
+    // But you're an ambitious person.
+    // You want to know if you're better than the average student in your class.
+
+    // You receive an array with your peers' test scores.
+    // Now calculate the average and compare your score!
+
+    // Return True if you're better, else False!
+
+    // Note:
+
+    // Your points are not included in the array of your class's points.
+    // For calculating the average point you may add your point to the given array!
+
+    const betterThanAverage = (classPoints, yourPoints) => yourPoints > classPoints.reduce((cum, curVal) => cum + curVal, yourPoints) / ++classPoints.length
+
+
+    // console.log(betterThanAverage([2, 3], 5)); // true
+    // console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)); // true
+    // console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)); // false
+
+
+    // Drink about
+
+    // DESCRIPTION:
+    //
+    // Kids drink toddy.
+    // Teens drink coke.
+    // Young adults drink beer.
+    // Adults drink whisky.
+    // Make a function that receive age, and return what they drink.
+    //
+    // Rules:
+    //
+    // Children under 14 old.
+    // Teens under 18 old.
+    // Young under 21 old.
+    // Adults have 21 or more.
+    // Examples: (Input --> Output)
+
+    // My Version
+
+    const peopleWithAgeDrink = old => {
+        return old < 14 ? "drink toddy" :
+            old < 18 ? "drink coke" :
+                old < 21 ? "drink beer" : "drink whisky";
+    };
+
+
+    console.log(peopleWithAgeDrink(17));
+
+
+    // Another nice version
+    const peopleWithAgeDrink1 = old =>
+        'drink ' + (old < 14 ? 'toddy' : old < 18 ? 'coke' : old < 21 ? 'beer' : 'whisky');
+    // Can be written
+    // const peopleWithAgeDrink1 = old =>
+    //  `drink ${old < 14 ? `toddy` : old < 18 ? `coke` : old < 21 ? `beer` : `whisky`}`;
+
+    console.log(peopleWithAgeDrink1(17));
+
+</script>
 
 
 </body>
