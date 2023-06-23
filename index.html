@@ -97,7 +97,7 @@
     };
 
 
-    console.log(peopleWithAgeDrink(17));
+    // console.log(peopleWithAgeDrink(17));
 
 
     // Another nice version
@@ -107,7 +107,55 @@
     // const peopleWithAgeDrink1 = old =>
     //  `drink ${old < 14 ? `toddy` : old < 18 ? `coke` : old < 21 ? `beer` : `whisky`}`;
 
-    console.log(peopleWithAgeDrink1(17));
+    // console.log(peopleWithAgeDrink1(17));
+
+
+    // Triple Trouble
+
+    // Create a function that will return a string that combines
+    // all of the letters of the three inputed strings in groups.
+    // Taking the first letter of all of the inputs and grouping
+    // them next to each other. Do this for every letter, see example below!
+    //
+    // E.g. Input: "aa", "bb" , "cc" => Output: "abcabc"
+    //
+    // Note: You can expect all of the inputs to be the same length.
+
+    // My version
+    const tripleTrouble = (one, two, three) => {
+        let res = "";
+        for (let i = 0; i < one.length; i++) {
+            res += one.charAt(i) + two.charAt(i) + three.charAt(i);
+        }
+        return res;
+    }
+
+    console.log(tripleTrouble("Aa", "Bb", "Cc"));
+
+
+    // Easier writing
+    const tripleTrouble1 = (one, two, three) => {
+        let res = "";
+        for (let i = 0; i < one.length; i++) {
+            res += one[i] + two[i] + three[i];
+        }
+        return res;
+    }
+
+    console.log(tripleTrouble1("Aa", "Bb", "Cc"));
+
+
+
+    // Advanced Solution
+
+    const tripleTrouble2 = (one, two, three) => {
+        return one.replace(/./g, (el, ind) => el + two[ind] + three[ind])  //  /./  The . metacharacter is matches any character, except newline or other line terminators.
+    }
+
+    console.log(tripleTrouble2("Aa", "Bb", "Cc"));
+
+
+
 
 </script>
 
