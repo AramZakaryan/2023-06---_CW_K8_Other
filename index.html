@@ -261,6 +261,15 @@
     console.log(fakeBin2("2037987279"));
 
 
+    // Another very very interesting coding
+
+    const fakeBin3 =x=> {
+        return x.replace(/./g, d => +(d >= 5)); // +(d >= 5) gives 0 or 1
+    }
+
+    console.log(fakeBin3("2037987279"));
+
+
 </script>
 
 
