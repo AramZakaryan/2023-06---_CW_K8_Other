@@ -242,7 +242,7 @@
     const fakeBin = x => x.split("").map(el => el < 5 ? 0 : 1).join("");
 
 
-    console.log(fakeBin("2037987279"));
+    // console.log(fakeBin("2037987279"));
 
 
     // Other solution with Replace()
@@ -250,7 +250,7 @@
 
     const fakeBin1 = x => x.replace(/\d/g, d => d < 5 ? 0 : 1);
 
-    console.log(fakeBin1("2037987279"));
+    // console.log(fakeBin1("2037987279"));
 
 
     // Another solution with two Replace() - More advanced
@@ -258,16 +258,62 @@
 
     const fakeBin2 = x => x.replace(/[0-4]/g, "O").replace(/[5-9]/g, "1");
 
-    console.log(fakeBin2("2037987279"));
+    // console.log(fakeBin2("2037987279"));
 
 
     // Another very very interesting coding
 
-    const fakeBin3 =x=> {
+    const fakeBin3 = x => {
         return x.replace(/./g, d => +(d >= 5)); // +(d >= 5) gives 0 or 1
     }
 
-    console.log(fakeBin3("2037987279"));
+    // console.log(fakeBin3("2037987279"));
+
+
+    //     Sum of Multiples
+
+    // DESCRIPTION:
+    //
+    //     Your Job
+    //
+    // Find the sum of all multiples of n below m
+    //
+    // Keep in Mind
+    //
+    // n and m are natural numbers (positive integers)
+    // m is excluded from the multiples
+    // Examples
+    //
+    // sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+    // sumMul(3, 13)  ==> 3 + 6 + 9 + 12 = 30
+    // sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+    // sumMul(4, -7)  ==> "INVALID"
+
+
+    // My solution
+
+    const sumMul = (n, m) => {
+        if (n >= m) {
+            return "INVALID"
+        } else {
+            let res = 0;
+            for (let i = n; i < m; i += n) {
+                res += i
+            }
+            return res
+        }
+    }
+
+    // console.log(sumMul(0, 0))
+    // console.log(sumMul(2, 9))
+    // console.log(sumMul(3, 13))
+    // console.log(sumMul(4, 123))
+    // console.log(sumMul(4, -7))
+    // console.log(sumMul(897, 243))
+
+
+
+
 
 
 </script>
