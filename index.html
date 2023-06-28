@@ -323,9 +323,9 @@
     // and the sentence: "A man, a plan, a canal – Panama".
 
 
-    const isPalindrome = (x) => {
-
-        return (y = x.toLowerCase()) === y.toLowerCase().split("").reverse("").join("")
+    const isPalindrome = x => {
+        let y =x.toLowerCase();
+        return y === y.split("").reverse("").join("")
     }
 
     console.log(isPalindrome("Madam"))
