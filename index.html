@@ -520,7 +520,30 @@
     // My solution
     const findNeedle = haystack => `found the needle at position ${haystack.indexOf("needle")}`
 
-    console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+    // console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+
+
+
+
+    // Sentence Smash
+    //
+    // DESCRIPTION
+    //
+    // Write a function that takes an array of words
+    // and smashes them together into a sentence and returns the sentence.
+    // You can ignore any need to sanitize words or add punctuation,
+    // but you should add spaces between each word.
+    // Be careful, there shouldn't be a space at the beginning
+    // or the end of the sentence!
+    //
+    // Example
+    //
+    // ['hello', 'world', 'this', 'is', 'great']
+    // =>  'hello world this is great'
+
+    const smash = words => words.join(" ")
+
+    console.log(smash(['hello', 'world', 'this', 'is', 'great']))
 
 </script>
 
