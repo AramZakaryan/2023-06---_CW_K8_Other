@@ -455,8 +455,6 @@
     // console.log(pipeFix1([10, 30, 50, 60, 70, 80]))
 
 
-
-
     // Convert a string to an array
     //
     // DESCRIPTION:
@@ -478,8 +476,6 @@
     // console.log(stringToArray())
 
 
-
-
     // MakeUpperCase
     //
     // DESCRIPTION:
@@ -492,8 +488,6 @@
     const makeUpperCase = str => str.toUpperCase()
 
     // console.log(makeUpperCase("Hello"))
-
-
 
 
     // A Needle in the Haystack
@@ -523,8 +517,6 @@
     // console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
 
 
-
-
     // Sentence Smash
     //
     // DESCRIPTION
@@ -543,7 +535,73 @@
 
     const smash = words => words.join(" ")
 
-    console.log(smash(['hello', 'world', 'this', 'is', 'great']))
+    // console.log(smash(['hello', 'world', 'this', 'is', 'great']))
+
+
+    // No zeros for heros
+
+    // DESCRIPTION:
+
+    // Numbers ending with zeros are boring.
+    //
+    // They might be fun in your world, but not here.
+    //
+    // Get rid of them. Only the ending ones.
+    //
+    // 1450 -> 145
+    // 960000 -> 96
+    // 1050 -> 105
+    // -1050 -> -105
+    // Zero alone is fine, don't worry about it. Poor guy anyway
+
+
+    // My solution
+
+
+    const noBoringZeros = num => {
+        let arr = num.toString().split("")
+        for (let k = arr.length - 1; k >= 0; k--) {
+            if (arr[k] === "0") {
+                arr[k] = ""
+            } else {
+                break
+            }
+        }
+        return +arr.join("")
+    }
+
+    console.log(noBoringZeros(105000))
+    console.log(noBoringZeros(0))
+
+
+    // Advanced Solution with RegExp
+
+    function noBoringZeros1(n) {
+        return +`${n}`.replace(/0*$/, "");
+        // Can be written also like
+        // return Number(String(n).replace(/0+$/,''));
+        // +   <==>   Number()
+        // `${n}`   <==>   (""+n)   <==>   toString()
+        // *   <==>    0 or many // + --> 1 or more
+        // $   <==>   the end of input
+    }
+
+    console.log(noBoringZeros1(105000))
+    console.log(noBoringZeros1(0))
+
+
+    // Another Advanced Solution with RECURSION
+
+    const noBoringZeros3 = num =>
+        num % 10 || num === 0 ? num : noBoringZeros3(num / 10)
+        // num%10   <==>   num % 10 !== 0
+
+    console.log(noBoringZeros3(105000))
+    console.log(noBoringZeros3(0))
+
+
+
+
 
 </script>
 
