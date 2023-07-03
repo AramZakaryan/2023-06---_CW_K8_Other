@@ -570,8 +570,8 @@
         return +arr.join("")
     }
 
-    console.log(noBoringZeros(105000))
-    console.log(noBoringZeros(0))
+    // console.log(noBoringZeros(105000))
+    // console.log(noBoringZeros(0))
 
 
     // Advanced Solution with RegExp
@@ -586,20 +586,60 @@
         // $   <==>   the end of input
     }
 
-    console.log(noBoringZeros1(105000))
-    console.log(noBoringZeros1(0))
+    // console.log(noBoringZeros1(105000))
+    // console.log(noBoringZeros1(0))
 
 
     // Another Advanced Solution with RECURSION
 
     const noBoringZeros3 = num =>
-        num % 10 || num === 0 ? num : noBoringZeros3(num / 10)
-        // num%10   <==>   num % 10 !== 0
+        num % 10 || !num ? num : noBoringZeros3(num / 10)
+    // num%10   <==>   num % 10 !== 0
+    // !num   <===>   num === 0
 
-    console.log(noBoringZeros3(105000))
-    console.log(noBoringZeros3(0))
+    // console.log(noBoringZeros3(105000))
+    // console.log(noBoringZeros3(0))
 
 
+    // L1: Set Alarm
+    //
+    // DESCRIPTION
+    //
+    // Write a function named setAlarm/set_alarm/set-alarm/setalarm
+    // (depending on language) which receives two parameters.
+    // The first parameter, employed, is true whenever you are employed
+    // and the second parameter, vacation is true whenever you are on vacation.
+    //
+    // The function should return true if you are employed and not on vacation
+    // (because these are the circumstances
+    // under which you need to set an alarm).
+    // It should return false otherwise. Examples:
+    //
+    // employed | vacation
+    // true     | true     => false
+    // true     | false    => true
+    // false    | true     => false
+    // false    | false    => false
+
+
+    // My solution
+
+    const setAlarm = (employed, vacation) => employed && !vacation
+
+
+    console.log(setAlarm(true, true))
+    console.log(setAlarm(false,true))
+    console.log(setAlarm(true, false))
+    console.log(setAlarm(false, false))
+
+
+    // Very Clever Solution
+    const setAlarm1 = (employed, vacation) => employed > vacation
+
+    console.log(setAlarm1(true, true))
+    console.log(setAlarm1(false,true))
+    console.log(setAlarm1(true, false))
+    console.log(setAlarm1(false, false))
 
 
 
