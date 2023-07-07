@@ -642,8 +642,6 @@
     // console.log(setAlarm1(false, false))
 
 
-
-
     // All Star Code Challenge #18
     //
     // DESCRIPTION:
@@ -667,11 +665,11 @@
     // In languages with no distinct character data type,
     // the second argument will be a string of length 1
 
-    
+
     // My Solution
 
-    const strCount = (str, letter) =>{
-        return str.split(letter).length-1
+    const strCount = (str, letter) => {
+        return str.split(letter).length - 1
     }
 
     // console.log(strCount("Hello", "o"))
@@ -679,16 +677,67 @@
     // console.log(strCount("", "l"))
     // console.log(strCount("Hello", "a"))
 
- 
+
     // Other solution with Filter
-    const strCount1 = (str, letter) =>{
-        return str.split("").filter(el=> el==letter).length
+    const strCount1 = (str, letter) => {
+        return str.split("").filter(el => el == letter).length
     }
 
     // console.log(strCount1("Hello", "o"))
     // console.log(strCount1("Hello", "l"))
     // console.log(strCount1("", "l"))
     // console.log(strCount1("Hello", "a"))
+
+
+
+
+    // Will there be enough space?
+    //
+    // DESCRIPTION:
+    //
+    // The Story:
+    //
+    // Bob is working as a bus driver.
+    // However, he has become extremely popular amongst the city's residents.
+    // With so many passengers wanting to get aboard his bus,
+    // he sometimes has to face the problem of not enough space left on the bus!
+    // He wants you to write a simple program telling him
+    // if he will be able to fit all the passengers.
+    //
+    // Task Overview:
+    //
+    // You have to write a function that accepts three parameters:
+    //
+    // "cap" is the amount of people the bus can hold excluding the driver.
+    // "on" is the number of people on the bus excluding the driver.
+    // "wait" is the number of people waiting to get on to the bus
+    // excluding the driver.
+    // If there is enough space, return 0, and if there isn't,
+    // return the number of passengers he can't take.
+    //
+    // Usage Examples:
+    //
+    // cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+    // cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+
+    // My Solution
+
+    const enough = (cap, on, wait) =>
+        ((res = on + wait - cap) > 0) ? res : 0
+
+    console.log(enough(10, 5, 5))
+    console.log(enough(100, 60, 50))
+
+
+    // Other Solution with Math.Max
+
+    const enough1 = (cap, on, wait) =>
+        Math.max(on + wait - cap, 0)
+
+    console.log(enough1(10, 5, 5))
+    console.log(enough1(100, 60, 50))
+
 
 
 </script>
