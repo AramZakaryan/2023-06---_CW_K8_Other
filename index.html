@@ -903,11 +903,92 @@
             swedish: 'Valkommen',
             welsh: 'Croeso'
         }
-        return langs[lang]||langs["english"]
+        return langs[lang] || langs["english"]
     }
 
-    console.log(greet("spanish"))
-    console.log(greet("arm"))
+    // console.log(greet("spanish"))
+    // console.log(greet("arm"))
+
+
+    // Who ate the cookie?
+
+    // DESCRIPTION:
+
+    // For this problem you must create a program that says
+    // who ate the last cookie.
+    // If the input is a string then "Zach" ate the cookie.
+    // If the input is a float or an int then "Monica" ate the cookie.
+    // If the input is anything else "the dog" ate the cookie.
+    // The way to return the statement is:
+    // "Who ate the last cookie? It was (name)!"
+    //
+    // Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach!
+    // (The reason you return Zach is because the input is a string)
+    //
+    // Note: Make sure you return the correct message with correct spaces
+    // and punctuation.
+
+
+    // My Solution 1 (with SWITCH)
+    const cookie1 = x => {
+        let who = ""
+        switch (typeof x) {
+            case "string":
+                who = "Zach";
+                break
+            case "number":
+                who = "Monica"
+                break
+            default:
+                who = "the dog"
+        }
+        return `Who ate the last cookie? It was ${who}!`
+
+    }
+
+    // console.log(cookie1("hi"))
+    // console.log(cookie1(35))
+    // console.log(cookie1({name:"Valod"}))
+
+
+    // My Solution 2 (with IF)
+    const cookie2 = x => {
+        let who = ""
+        typeof x === "string" ? who = "Zach" :
+            typeof x === "number" ? who = "Monica" :
+                who = "the dog"
+        return `Who ate the last cookie? It was ${who}!`
+    }
+
+    // console.log(cookie2("hi"))
+    // console.log(cookie2(35))
+    // console.log(cookie2({name:"Valod"}))
+
+
+    // My Solution 3
+    const cookie3 = x => {
+        let type = typeof x
+        let who = type === "string" ? "Zach" :
+            type === "number" ? "Monica" :
+                "the dog"
+        return `Who ate the last cookie? It was ${who}!`
+    }
+
+    // console.log(cookie3("hi"))
+    // console.log(cookie3(35))
+    // console.log(cookie3({name: "Valod"}))
+
+
+    // Very Nice Solution
+    const cookie4 = x => `Who ate the last cookie? It was ${
+        {string: "Zach", number: "Monica"}[typeof x] || "the dog"
+    }!`
+
+    // console.log(cookie4("hi"))
+    // console.log(cookie4(35))
+    // console.log(cookie4({name: "Valod"}))
+
+
 
 </script>
 
