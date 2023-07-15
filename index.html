@@ -680,7 +680,7 @@
 
     // Other solution with Filter
     const strCount1 = (str, letter) => {
-        return str.split("").filter(el => el == letter).length
+        return str.split("").filter(el => el === letter).length
     }
 
     // console.log(strCount1("Hello", "o"))
@@ -931,7 +931,7 @@
 
     // My Solution 1 (with SWITCH)
     const cookie1 = x => {
-        let who = ""
+        let who
         switch (typeof x) {
             case "string":
                 who = "Zach";
@@ -953,7 +953,7 @@
 
     // My Solution 2 (with IF)
     const cookie2 = x => {
-        let who = ""
+        let who
         typeof x === "string" ? who = "Zach" :
             typeof x === "number" ? who = "Monica" :
                 who = "the dog"
@@ -1014,12 +1014,39 @@
 
     // My solution
     const whoIsPaying = name =>
-        // name.length > 2 ? [name, name.slice(0,2)] : [name]
-        [...new Set([name, name.slice(0, 2)])]
+        name.length > 2 ? [name, name.slice(0, 2)] : [name]
+    // I dont understand this alternative code
+    // [...new Set([name, name.slice(0, 2)])]
 
-    console.log(whoIsPaying("Melania"))
-    console.log(whoIsPaying("Me"))
-    console.log(whoIsPaying(""))
+    // console.log(whoIsPaying("Melania"))
+    // console.log(whoIsPaying("Me"))
+    // console.log(whoIsPaying(""))
+
+
+    // Grasshopper - Function syntax debugging
+    //
+    // DESCRIPTION:
+    //
+    // Grasshopper - Function syntax debugging
+    //
+    // A student was working on a function
+    // and made some syntax mistakes while coding.
+    // Help them find their mistakes and fix them.
+
+    // My version
+    function main1(verb, noun) {
+        return verb + noun
+    }
+
+    console.log(main1("pay", "money"))
+
+
+    // Advanced Version
+
+    const main2 = (...a) => a.join("") // ...  Rest operator
+
+    console.log(main2("pay", "money"))
+
 
 </script>
 
