@@ -1038,15 +1038,32 @@
         return verb + noun
     }
 
-    console.log(main1("pay", "money"))
+    // console.log(main1("pay", "money"))
 
 
     // Advanced Version
 
     const main2 = (...a) => a.join("") // ...  Rest operator
 
-    console.log(main2("pay", "money"))
+    // console.log(main2("pay", "money"))
 
+
+
+    // Simple multiplication
+    //
+    // DESCRIPTION:
+    //
+    // This kata is about multiplying a given number
+    // by eight if it is an even number and
+    // by nine otherwise.
+
+
+    // My Solution
+
+    const simpleMultiplication = num => num*(num%2?9:8)
+
+    console.log(simpleMultiplication(2))
+    console.log(simpleMultiplication(3))
 
 </script>
 
