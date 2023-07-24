@@ -1048,7 +1048,6 @@
     // console.log(main2("pay", "money"))
 
 
-
     // Simple multiplication
     //
     // DESCRIPTION:
@@ -1060,12 +1059,10 @@
 
     // My Solution
 
-    const simpleMultiplication = num => num*(num%2?9:8)
+    const simpleMultiplication = num => num * (num % 2 ? 9 : 8)
 
     // console.log(simpleMultiplication(2))
     // console.log(simpleMultiplication(3))
-
-
 
 
     // Holiday VIII - Duty Free
@@ -1099,12 +1096,10 @@
 
     // My Solution
 
-    const dutyFree = (pr, disc, hol) => Math.floor(hol/pr/disc*100)
+    const dutyFree = (pr, disc, hol) => Math.floor(hol / pr / disc * 100)
 
     // console.log(dutyFree(10,10,500))
     // console.log(dutyFree(12,50,1000))
-
-
 
 
     // Remove duplicates from list
@@ -1121,7 +1116,7 @@
     // My solution
 
     const distinct = arr => {
-       return arr.filter((el, ind)=> arr.indexOf(el)===ind)
+        return arr.filter((el, ind) => arr.indexOf(el) === ind)
     }
 
     // console.log(distinct([1,2,3,3,3,4,5]))
@@ -1130,10 +1125,53 @@
     // More advanced solution
 
     const distinct1 = arr => {
-        return [... new Set(arr)]
+        return [...new Set(arr)]
     }
 
-    console.log(distinct1([1,2,3,3,3,4,5]))
+    // console.log(distinct1([1,2,3,3,3,4,5]))
+
+
+    // Draw stairs
+    //
+    // DESCRIPTION:
+    //
+    // Given a number n, draw stairs using the letter "I",
+    // n tall and n wide, with the tallest in the top left.
+    //
+    // For example n = 3 result in:
+    //
+    // "I\n I\n  I"
+    //
+    // or printed:
+    //
+    //     I
+    //      I
+    //       I
+    // Another example, a 7-step stairs should be drawn like this:
+    //
+    //      I
+    //       I
+    //        I
+    //         I
+    //          I
+    //           I
+    //            I
+
+
+    // My solution
+
+    const drawStairs = n => {
+        let arr = []
+        for (let i = 0; i < n; i++) {
+            arr[i] = " ".repeat(i) +"I"+(i!==n-1?"\n":"")
+        }
+        return arr.join("")
+
+    }
+
+    // console.log("I")
+    console.log(drawStairs(4))
+
 
 </script>
 
