@@ -1101,10 +1101,39 @@
 
     const dutyFree = (pr, disc, hol) => Math.floor(hol/pr/disc*100)
 
-    console.log(dutyFree(10,10,500))
-    console.log(dutyFree(12,50,1000))
+    // console.log(dutyFree(10,10,500))
+    // console.log(dutyFree(12,50,1000))
 
 
+
+
+    // Remove duplicates from list
+    //
+    // DESCRIPTION:
+    //
+    // Define a function that removes duplicates
+    // from an array of non negative numbers and
+    // returns it as a result.
+    //
+    // The order of the sequence has to stay the same.
+
+
+    // My solution
+
+    const distinct = arr => {
+       return arr.filter((el, ind)=> arr.indexOf(el)===ind)
+    }
+
+    // console.log(distinct([1,2,3,3,3,4,5]))
+
+
+    // More advanced solution
+
+    const distinct1 = arr => {
+        return [... new Set(arr)]
+    }
+
+    console.log(distinct1([1,2,3,3,3,4,5]))
 
 </script>
 
