@@ -1163,7 +1163,7 @@
     const drawStairs = n => {
         let arr = []
         for (let i = 0; i < n; i++) {
-            arr[i] = " ".repeat(i) +"I"+(i!==n-1?"\n":"")
+            arr[i] = " ".repeat(i) + "I" + (i !== n - 1 ? "\n" : "")
         }
         return arr.join("")
 
@@ -1173,8 +1173,6 @@
     // console.log(drawStairs(4))
 
 
-
-
     // Even or Odd
     //
     // DESCRIPTION:
@@ -1182,12 +1180,10 @@
     // Create a function that takes an integer as an argument
     // and returns "Even" for even numbers or "Odd" for odd numbers.
 
-    const evenOrOdd = num => num%2?"Odd":"Even"
+    const evenOrOdd = num => num % 2 ? "Odd" : "Even"
 
 
     // console.log(evenOrOdd(4))
-
-
 
 
     // Sum of positive
@@ -1204,10 +1200,41 @@
 
     // My Solution
 
-    const positiveSum = arr => arr.reduce((acc,el)=>acc+(el>0&&el),0)
+    const positiveSum = arr => arr.reduce((acc, el) => acc + (el > 0 && el), 0)
 
-    console.log(positiveSum([1,-4,7,12])) // 20
-    console.log(positiveSum([])) // 0
+    // console.log(positiveSum([1,-4,7,12])) // 20
+    // console.log(positiveSum([])) // 0
+
+
+    // Return Negative
+    //
+    // DESCRIPTION:
+    //
+    // In this simple assignment you are given a number
+    // and have to make it negative.
+    // But maybe the number is already negative?
+    //
+    // Examples
+    //
+    // makeNegative(1);    // return -1
+    // makeNegative(-5);   // return -5
+    // makeNegative(0);    // return 0
+    // makeNegative(0.12); // return -0.12
+    // Notes
+    //
+    // The number can be negative already,
+    // in which case no change is required.
+    // Zero (0) is not checked for any specific sign.
+    // Negative zeros make no mathematical sense.
+
+    // My solution
+
+    const makeNegative = num => num > 0 ? -num : num
+
+    console.log(makeNegative(1)) // return -1
+    console.log(makeNegative(-5)) // return -5
+    console.log(makeNegative(0)) // return 0
+    console.log(makeNegative(-0.12)) // return -0.12
 
 
 </script>
