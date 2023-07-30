@@ -1237,8 +1237,6 @@
     // console.log(makeNegative(-0.12)) // return -0.12
 
 
-
-
     // Reversed Strings
     //
     // DESCRIPTION:
@@ -1256,8 +1254,6 @@
     // const solution = str => [...str].reverse().join('')
 
     // console.log(solution("world"))
-
-
 
 
     // Convert a Number to a String!
@@ -1303,7 +1299,26 @@
 
     const numberToString11 = String
 
-    console.log(numberToString11(999))
+    // console.log(numberToString11(999))
+
+
+    // Remove First and Last Character
+    //
+    // DESCRIPTION:
+    //
+    // It's pretty straightforward.
+    // Your goal is to create a function that removes
+    // the first and last characters of a string.
+    // You're given one parameter, the original string.
+    // You don't have to worry with strings with
+    // less than two characters.
+
+    // My Solution
+
+    const removeChar = str => str.slice(1,-1)
+
+
+    console.log(removeChar("eloquent")) // "loquen"
 
 </script>
 
