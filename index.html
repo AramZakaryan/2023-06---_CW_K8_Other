@@ -1255,7 +1255,55 @@
     // Alternative way
     // const solution = str => [...str].reverse().join('')
 
-    console.log(solution("world"))
+    // console.log(solution("world"))
+
+
+
+
+    // Convert a Number to a String!
+
+    // DESCRIPTION:
+
+    // We need a function that can transform
+    // a number (integer) into a string.
+    //
+    // What ways of achieving this do you know?
+    //
+    // Examples (input --> output):
+    //
+    // 123  --> "123"
+    // 999  --> "999"
+    // -100 --> "-100"
+
+
+    // My solution
+
+    // const numberToString = num => num.toString()
+    // Alternative way 1
+    // const numberToString = num => String(num)
+    // Alternative way 2
+    // const numberToString = num => ""+num
+    // Alternative way 3
+    const numberToString = num => `${num}`
+
+    // console.log(numberToString(999))
+
+
+    // The Best Solution
+
+    // Like all Javascript functions, String is a first class member,
+    // so if you assign it to a variable without applying it
+    // (i.e. not placing any parentheses behind it),
+    // calling that variable using parentheses and arguments
+    // will call the function assigned to it.
+
+    // A more useful property of this can be seen
+    // when using functions like map, e.g. [1,2,3].map(x => String(x))
+    // can be shortened to just [1,2,3].map(String)
+
+    const numberToString11 = String
+
+    console.log(numberToString11(999))
 
 </script>
 
