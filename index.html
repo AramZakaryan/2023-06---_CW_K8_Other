@@ -1317,8 +1317,52 @@
 
     const removeChar = str => str.slice(1,-1)
 
+    // console.log(removeChar("eloquent")) // "loquen"
 
-    console.log(removeChar("eloquent")) // "loquen"
+
+
+
+    // String repeat
+    //
+    // DESCRIPTION:
+    //
+    // Write a function that accepts
+    // an integer n and a string s as parameters,
+    // and returns a string of s repeated exactly n times.
+    //
+    // Examples (input -> output)
+    //
+    // 6, "I"     -> "IIIIII"
+    // 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+
+    // My Solution
+
+    const repeatStr = (num, str) => str.repeat(num)
+
+    // console.log(repeatStr(5,"A"))
+
+
+
+
+    // Square(n) Sum
+    //
+    // DESCRIPTION:
+    //
+    // Complete the square sum function so that it squares each number passed into it and then sums the results together.
+    //
+    // For example, for [1, 2, 2] it should return 9 because
+    // 1**2 + 2**2 + 2**2 = 9
+
+
+    // My solution
+
+    const squareSum = arr => arr.reduce((acc, el)=>acc+el**2, 0)
+
+    console.log(squareSum([1, 2, 2]))
+
+
+
 
 </script>
 
