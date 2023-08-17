@@ -1315,11 +1315,9 @@
 
     // My Solution
 
-    const removeChar = str => str.slice(1,-1)
+    const removeChar = str => str.slice(1, -1)
 
     // console.log(removeChar("eloquent")) // "loquen"
-
-
 
 
     // String repeat
@@ -1343,8 +1341,6 @@
     // console.log(repeatStr(5,"A"))
 
 
-
-
     // Square(n) Sum
     //
     // DESCRIPTION:
@@ -1357,11 +1353,9 @@
 
     // My solution
 
-    const squareSum = arr => arr.reduce((acc, el)=>acc+el**2, 0)
+    const squareSum = arr => arr.reduce((acc, el) => acc + el ** 2, 0)
 
     // console.log(squareSum([1, 2, 2]))
-
-
 
 
     // Remove String Spaces
@@ -1379,17 +1373,93 @@
 
 
     // My Solution
-    const noSpace = str =>str.split(" ").join("")
+    const noSpace = str => str.split(" ").join("")
 
     // console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"))
 
 
     // Solution with replace and replaceAll
-    const noSpace1 = str =>str.replaceAll(" ", "")
+    const noSpace1 = str => str.replaceAll(" ", "")
     // Another version with RegExp
     // const noSpace1 = str =>str.replace(/ /g, '')
 
-    console.log(noSpace1("8 j 8   mBliB8g  imjB8B8  jl  B"))
+    // console.log(noSpace1("8 j 8   mBliB8g  imjB8B8  jl  B"))
+
+
+    // Basic Mathematical Operations
+
+    // DESCRIPTION:
+
+    // Your task is to create a function that does four basic mathematical operations.
+    //
+    // The function should take three arguments - operation(string/char), value1(number), value2(number).
+    // The function should return result of numbers after applying the chosen operation.
+    //
+    // Examples(Operator, value1, value2) --> output
+    //
+    // ('+', 4, 7) --> 11
+    // ('-', 15, 18) --> -3
+    // ('*', 5, 5) --> 25
+    // ('/', 49, 7) --> 7
+    //
+
+
+    // My Solution
+    const basicOp = (operation, val1, val2) => {
+        let res
+        switch (operation) {
+            case "+":
+                res = val1 + val2
+                break
+            case "-":
+                res = val1 - val2
+                break
+            case "*":
+                res = val1 * val2
+                break
+            case "/":
+                res = val1 / val2
+        }
+        return res
+    }
+
+    // console.log(basicOp("+", 15, 5))
+    // console.log(basicOp("-", 15, 5))
+    // console.log(basicOp("*", 15, 5))
+    // console.log(basicOp("/", 15, 5))
+
+
+    // The best solution
+
+    const basicOp1 = (operation, val1, val2) => eval(val1 + operation + val2)
+
+    // console.log(basicOp1("+", 15, 5))
+    // console.log(basicOp1("-", 15, 5))
+    // console.log(basicOp1("*", 15, 5))
+    // console.log(basicOp1("/", 15, 5))
+
+
+    // Another very good solution
+
+    const basicOp2 = (operation, val1, val2) => {
+        let arr = {
+            "+": val1 + val2,
+            "-": val1 - val2,
+            "*": val1 * val2,
+            "/": val1 / val2
+        }
+        return arr[operation]
+    }
+
+    console.log(basicOp2("+", 15, 5))
+    console.log(basicOp2("-", 15, 5))
+    console.log(basicOp2("*", 15, 5))
+    console.log(basicOp2("/", 15, 5))
+
+
+
+
+
 
 
 
