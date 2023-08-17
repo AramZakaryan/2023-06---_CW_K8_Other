@@ -1451,10 +1451,50 @@
         return arr[operation]
     }
 
-    console.log(basicOp2("+", 15, 5))
-    console.log(basicOp2("-", 15, 5))
-    console.log(basicOp2("*", 15, 5))
-    console.log(basicOp2("/", 15, 5))
+    // console.log(basicOp2("+", 15, 5))
+    // console.log(basicOp2("-", 15, 5))
+    // console.log(basicOp2("*", 15, 5))
+    // console.log(basicOp2("/", 15, 5))
+
+
+
+
+
+    // Keep Hydrated!
+
+    // DESCRIPTION:
+    //
+    // Nathan loves cycling.
+    //
+    // Because Nathan knows it is important to stay hydrated,
+    // he drinks 0.5 litres of water per hour of cycling.
+    //
+    // You get given the time in hours and you need to return
+    // the number of litres Nathan will drink,
+    // rounded to the smallest value.
+    //
+    // For example:
+    // time = 3 ----> litres = 1
+    // time = 6.7---> litres = 3
+    // time = 11.8--> litres = 5
+
+
+    // My solution
+
+    const litres = (time) => Math.floor(time*0.5)
+
+    // console.log(litres(1.4))
+
+
+    // Another clever solutions
+    // Version 1
+    // const litres1 = (time) => ~~(time*0.5)
+    // Version 2
+    // const litres1 = (time) => time*0.5 | 0
+    // Version 3
+    const litres1 = (time) => parseInt(time*0.5)
+
+    console.log(litres1(1.4))
 
 
 
