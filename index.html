@@ -1457,9 +1457,6 @@
     // console.log(basicOp2("/", 15, 5))
 
 
-
-
-
     // Keep Hydrated!
 
     // DESCRIPTION:
@@ -1481,7 +1478,7 @@
 
     // My solution
 
-    const litres = (time) => Math.floor(time*0.5)
+    const litres = (time) => Math.floor(time * 0.5)
 
     // console.log(litres(1.4))
 
@@ -1492,15 +1489,29 @@
     // Version 2
     // const litres1 = (time) => time*0.5 | 0
     // Version 3
-    const litres1 = (time) => parseInt(time*0.5)
+    const litres1 = (time) => parseInt(time * 0.5)
 
-    console.log(litres1(1.4))
-
-
+    // console.log(litres1(1.4))
 
 
+    // Double Char
+    //
+    // DESCRIPTION:
+    //
+    // Given a string, you have to return a string
+    // in which each character (case-sensitive) is repeated once.
+    //
+    // Examples (Input -> Output):
+    //
+    // * "String"      -> "SSttrriinngg"
+    // * "Hello World" -> "HHeelllloo  WWoorrlldd"
+    // * "1234!_ "     -> "11223344!!__  "
 
 
+    // My solution
+    const doubleChar = str => [...str].map(el=>el+el).join("")
+
+    // console.log(doubleChar("Aram"))
 
 
 </script>
