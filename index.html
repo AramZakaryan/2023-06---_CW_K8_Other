@@ -1457,6 +1457,9 @@
     // console.log(basicOp2("/", 15, 5))
 
 
+
+
+
     // Keep Hydrated!
 
     // DESCRIPTION:
@@ -1478,7 +1481,7 @@
 
     // My solution
 
-    const litres = (time) => Math.floor(time * 0.5)
+    const litres = (time) => Math.floor(time*0.5)
 
     // console.log(litres(1.4))
 
@@ -1489,42 +1492,13 @@
     // Version 2
     // const litres1 = (time) => time*0.5 | 0
     // Version 3
-    const litres1 = (time) => parseInt(time * 0.5)
+    const litres1 = (time) => parseInt(time*0.5)
 
-    // console.log(litres1(1.4))
-
-
+    console.log(litres1(1.4))
 
 
 
-    // Stringy Strings
-    //
-    // DESCRIPTION:
-    //
-    // write me a function stringy that takes
-    // a size and returns a string of alternating 1s and 0s.
-    //
-    // the string should start with a 1.
-    //
-    // a string with size 6 should return :'101010'.
-    //
-    // with size 4 should return : '1010'.
-    //
-    // with size 12 should return : '101010101010'.
-    //
-    // The size will always be positive and will only use whole numbers.
 
-    const stringy = size => `${'10'.repeat(size / 2)}${size % 2 ? "1" : ""}`
-
-    // console.log(stringy(6))
-    // console.log(stringy(7))
-
-
-    // Another very interesting solution
-    const stringy1 = size => "10".repeat(size/2+1).slice(0,size)
-
-    console.log(stringy1(6))
-    console.log(stringy1(7))
 
 
 
