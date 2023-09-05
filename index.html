@@ -1623,9 +1623,33 @@
     // Anouther solution
     const abbrevName1 = (str) => str.split(" ").map(el=>el[0]).join(".").toUpperCase()
 
-    console.log(abbrevName1("patrick feeney"))
+    // console.log(abbrevName1("patrick feeney"))
 
 
+
+
+    // Convert number to reversed array of digits
+
+    // DESCRIPTION:
+    //
+    // Convert number to reversed array of digits
+    //
+    // Given a random non-negative number,
+    // you have to return the digits of this number within an array in reverse order.
+    //
+    // Example(Input => Output):
+    //
+    // 35231 => [1,3,2,5,3]
+    // 0 => [0]
+
+    // My solution
+
+    // const digitize = num => num.toString().split("").map(el=>Number(el)).reverse()
+
+    // map(el=>Number(el)) can be written short
+    const digitize = num => num.toString().split("").map(Number).reverse()
+
+    console.log(digitize(35231))
 
 
 </script>
