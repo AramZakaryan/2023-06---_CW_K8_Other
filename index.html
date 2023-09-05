@@ -1593,7 +1593,38 @@
 
     stringToNumber2 = str => Number(str)
 
-    console.log(stringToNumber2("123"))
+    // console.log(stringToNumber2("123"))
+
+
+
+
+    // Abbreviate a Two Word Name
+
+    // DESCRIPTION:
+    //
+    // Write a function to convert a name into initials.
+    // This kata strictly takes two words with one space in between them.
+    //
+    // The output should be two capital letters with a dot separating them.
+    //
+    // It should look like this:
+    //
+    // Sam Harris => S.H
+    //
+    // patrick feeney => P.F
+
+
+    // My solution
+    const abbrevName = (str) => str.toUpperCase().charAt(0)+"."+str.toUpperCase().charAt(str.indexOf(" ")+1)
+
+    // console.log(abbrevName("patrick feeney"))
+
+
+    // Anouther solution
+    const abbrevName1 = (str) => str.split(" ").map(el=>el[0]).join(".").toUpperCase()
+
+    console.log(abbrevName1("patrick feeney"))
+
 
 
 
