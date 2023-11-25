@@ -1827,8 +1827,6 @@
     // console.log(neutralise1("-++-", "-+-+")) // "-+00"
 
 
-
-
     // Grasshopper - Array Mean
     //
     // DESCRIPTION:
@@ -1855,13 +1853,34 @@
     //
     // 3. The mean (or average) of this list is 4
 
-    const findAverage = arr => arr.reduce((acc, el, ind)=>(acc*ind+el)/(ind+1) ,0)
+    const findAverage = arr => arr.reduce((acc, el, ind) => (acc * ind + el) / (ind + 1), 0)
 
     // console.log(findAverage([1,3,5,7]))
 
 
+    // FIXME: Replace all dots
+
+    // DESCRIPTION:
+    //
+    //     The code provided is supposed replace all the dots . in the specified
+    //     String str with dashes -
+    //
+    // But it's not working properly.
+    //
+    // Task
+    //
+    // Fix the bug so we can all go home early.
+    //
+    //     Notes
+    //
+    // String str will never be null.
 
 
+    const replaceDots = str => {
+        return str.replace(/\./g, '-');
+    }
+
+    console.log(replaceDots("one.two.three"))
 
 
 </script>
