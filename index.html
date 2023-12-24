@@ -1881,7 +1881,6 @@
     }
 
 
-
     // Chuck Norris VII - True or False? (Beginner)
 
     //
@@ -1898,7 +1897,6 @@
     // const ifChuckSaysSo = () => ({}==={})
     // version 2
     const ifChuckSaysSo2 = () => !true
-
 
 
     // Quadratic Coefficients Solver
@@ -1935,11 +1933,10 @@
     // When x1 == x2, this means the root has the multiplicity of two
 
 
-    const quadratic = (y1, y2)=> [1,-(y1+y2), y1*y2]
-        // (x-y1)*(x-y2) = x^2 - y2*x -y1*x + y1*y2 = x^2 - (y2+y1)*x + y1*y2
+    const quadratic = (y1, y2) => [1, -(y1 + y2), y1 * y2]
+    // (x-y1)*(x-y2) = x^2 - y2*x -y1*x + y1*y2 = x^2 - (y2+y1)*x + y1*y2
 
     // console.log(quadratic(0,1))
-
 
 
     // Generate range of integers
@@ -1960,18 +1957,74 @@
     // start < stop
     // step > 0
 
-    const generateRange= (min, max, step) =>{
+    const generateRange = (min, max, step) => {
         let arr = []
-        for (let i=min; i<=max; i+=step) {
+        for (let i = min; i <= max; i += step) {
             arr.push(i)
         }
         return arr
     }
 
-    console.log(generateRange(1, 10, 1))
-    console.log(generateRange(-10, 1, 1))
-    console.log(generateRange(1, 15, 20))
+    // console.log(generateRange(1, 10, 1))
+    // console.log(generateRange(-10, 1, 1))
+    // console.log(generateRange(1, 15, 20))
 
+
+    // Define a card suit
+
+
+    // DESCRIPTION:
+    //
+    // You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+    //
+    // Our deck (is preloaded):
+    //
+    // ('3♣') -> return 'clubs'
+    // ('3♦') -> return 'diamonds'
+    // ('3♥') -> return 'hearts'
+    // ('3♠') -> return 'spades'
+
+
+    // My Solution
+
+    const defineSuit = card => {
+        const symb = card.slice(-1)
+        switch (symb) {
+            case "♣":
+                return "clubs"
+            case '♦':
+                return 'diamonds'
+            case '♥':
+                return 'hearts'
+            case '♠':
+                return 'spades'
+        }
+    }
+
+
+    // console.log(defineSuit('3♣'))
+    // console.log(defineSuit('3♦'))
+    // console.log(defineSuit('3♥'))
+    // console.log(defineSuit('3♠'))
+
+
+    // Best Solution
+
+    const defineSuit1 = card => {
+        return {
+            "♣": "clubs",
+            '♦': 'diamonds',
+            '♥': 'hearts',
+            '♠': 'spades'
+        }[card.slice(-1)]
+
+    }
+
+
+    console.log(defineSuit1('3♣'))
+    console.log(defineSuit1('3♦'))
+    console.log(defineSuit1('3♥'))
+    console.log(defineSuit1('3♠'))
 
 </script>
 
