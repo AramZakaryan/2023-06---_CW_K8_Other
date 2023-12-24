@@ -2021,11 +2021,46 @@
     }
 
 
-    console.log(defineSuit1('3♣'))
-    console.log(defineSuit1('3♦'))
-    console.log(defineSuit1('3♥'))
-    console.log(defineSuit1('3♠'))
+    // console.log(defineSuit1('3♣'))
+    // console.log(defineSuit1('3♦'))
+    // console.log(defineSuit1('3♥'))
+    // console.log(defineSuit1('3♠'))
 
+
+    // Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+
+    // DESCRIPTION:
+    //
+    //
+    // Description:
+    //
+    // Remove all exclamation marks from the end of sentence.
+    //
+    // Examples
+    //
+    // "Hi!"     ---> "Hi"
+    // "Hi!!!"   ---> "Hi"
+    // "!Hi"     ---> "!Hi"
+    // "!Hi!"    ---> "!Hi"
+    // "Hi! Hi!" ---> "Hi! Hi"
+    // "Hi"      ---> "Hi"
+
+    const remove = str => {
+        let revArr = str.split("")
+        let k = 0
+        for (let i = revArr.length - 1; i >= 0; i--) {
+            if (revArr[i] === "!") {
+                k += 1
+            } else {
+                break
+            }
+        }
+        if (k===0) {return str} else {return str.slice(0,-k)}
+    }
+
+    console.log(remove("!Hi"))
+    console.log(remove("!Hi!!"))
+    console.log(remove("Hi! Hi!"))
 </script>
 
 
