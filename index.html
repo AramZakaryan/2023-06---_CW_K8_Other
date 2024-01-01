@@ -2055,12 +2055,54 @@
                 break
             }
         }
-        if (k===0) {return str} else {return str.slice(0,-k)}
+        if (k === 0) {
+            return str
+        } else {
+            return str.slice(0, -k)
+        }
     }
 
-    console.log(remove("!Hi"))
-    console.log(remove("!Hi!!"))
-    console.log(remove("Hi! Hi!"))
+    // console.log(remove("!Hi"))
+    // console.log(remove("!Hi!!"))
+    // console.log(remove("Hi! Hi!"))
+
+
+    // Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+
+    // DESCRIPTION:
+    //
+    // Description:
+    //
+    // Remove n exclamation marks in the sentence from left to right. n is positive integer.
+    //
+    // Examples
+    //
+    // remove("Hi!",1) === "Hi"
+    // remove("Hi!",100) === "Hi"
+    // remove("Hi!!!",1) === "Hi!!"
+    // remove("Hi!!!",100) === "Hi"
+    // remove("!Hi",1) === "Hi"
+    // remove("!Hi!",1) === "Hi!"
+    // remove("!Hi!",100) === "Hi"
+    // remove("!!!Hi !!hi!!! !hi",1) === "!!Hi !!hi!!! !hi"
+    // remove("!!!Hi !!hi!!! !hi",3) === "Hi !!hi!!! !hi"
+    // remove("!!!Hi !!hi!!! !hi",5) === "Hi hi!!! !hi"
+    // remove("!!!Hi !!hi!!! !hi",100) === "Hi hi hi"
+
+
+    // My Solution
+
+    const remove100 = (str, num) => {
+        let res = str
+        for (let i = 0; i < num; i++) {
+            res = res.replace("!", "")
+        }
+        return res
+    }
+
+    // console.log(remove100("Hi!!!",2))
+
+
 </script>
 
 
