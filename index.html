@@ -2125,23 +2125,55 @@
 
 
     const fuelPrice = (l, p) => {
-        let d= l > 9 ? 0.25 : ~~(l / 2) * 0.05 // discount per liter
-        return Math.round(l*(p-d)*100)/100
+        let d = l > 9 ? 0.25 : ~~(l / 2) * 0.05 // discount per liter
+        return Math.round(l * (p - d) * 100) / 100
     }
 
-    console.log(fuelPrice(13, 3))
+    // console.log(fuelPrice(13, 3))
 
 
     // Another solution with Math.min
 
     const fuelPrice1 = (l, p) => {
-        let d= Math.min (0.25, ~~(l / 2) * 0.05) // discount per liter
-        return Math.round(l*(p-d)*100)/100
+        let d = Math.min(0.25, ~~(l / 2) * 0.05) // discount per liter
+        return Math.round(l * (p - d) * 100) / 100
     }
 
-    console.log(fuelPrice1(13, 3))
+    // console.log(fuelPrice1(13, 3))
 
 
+
+
+
+    // Sum without highest and lowest number
+
+    // DESCRIPTION:
+    //
+    //     Task
+    //
+    // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+    //
+    // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+    //
+    //     Mind the input validation.
+    //
+    //     Example
+    //
+    // { 6, 2, 1, 8, 10 } => 16
+    // { 1, 1, 11, 2, 3 } => 6
+
+    const sumArray = arr => {
+        if (arr && arr.length>2) {
+            return arr.reduce((acc, el) => acc + el, 0) - Math.min(...arr) - Math.max(...arr)
+        } else {
+            return 0
+        }
+    }
+
+    console.log(sumArray([6, 2, 1, 8, 10]))
+    console.log(sumArray([6, 2, 1, 8, 10]))
+    console.log(sumArray(null))
+    console.log(sumArray([]))
 
 
 </script>
