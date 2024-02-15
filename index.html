@@ -2227,12 +2227,34 @@
     // const multiply = num => num * 5 ** (num.toString().length - (num < 0 ? 1 : 0))
     const multiply = num => num * 5 ** (Math.abs(num).toString().length)
 
-    console.log(multiply(3))
-    console.log(multiply(10))
-    console.log(multiply(200))
-    console.log(multiply(0))
-    console.log(multiply(-3))
+    // console.log(multiply(3))
+    // console.log(multiply(10))
+    // console.log(multiply(200))
+    // console.log(multiply(0))
+    // console.log(multiply(-3))
 
+
+
+
+    // Grasshopper - Combine strings
+
+    // DESCRIPTION:
+    //
+    // Combine strings function
+    //
+    // Create a function named combineNames that accepts two parameters (first and last name).
+    // The function should return the full name.
+    //
+    // Example:
+    //
+    // combineNames('James', 'Stevens')
+    // returns:
+    //
+    // 'James Stevens'
+
+    const combineNames = (str1, str2) => `${str1} ${str2}`
+
+    console.log(combineNames('James', 'Stevens'))
 
 </script>
 
