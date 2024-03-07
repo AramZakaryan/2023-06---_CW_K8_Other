@@ -2303,7 +2303,7 @@
     const flickSwitch = arr => {
         let value = true
         let res = []
-        for (let i = 0; i<arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i] === 'flick') {
                 value = !value
             }
@@ -2313,21 +2313,67 @@
     }
 
 
-    console.log(flickSwitch(['bicycle', 'jarmony', 'flick', 'sheep', 'flick']))
+    // console.log(flickSwitch(['bicycle', 'jarmony', 'flick', 'sheep', 'flick']))
 
 
-     // Solution with map
+    // Solution with map
 
     const flickSwitch1 = arr => {
         let val = true
-        return arr.map(el=> el==="flick"? val=!val : val)
+        return arr.map(el => el === "flick" ? val = !val : val)
     }
 
 
-    console.log(flickSwitch1(['bicycle', 'jarmony', 'flick', 'sheep', 'flick']))
+    // console.log(flickSwitch1(['bicycle', 'jarmony', 'flick', 'sheep', 'flick']))
 
 
 
+
+    // Fundamentals: Return
+
+    // Make multiple functions that will return the sum,
+    // difference, modulus, product, quotient, and the exponent respectively.
+    //
+    // Please use the following function names:
+    //
+    // addition = add
+    //
+    // multiply = multiply
+    //
+    // division = divide (both integer and float divisions are accepted)
+    //
+    // modulus = mod
+    //
+    // exponential = exponent
+    //
+    // subtraction = subt
+    //
+    // Note: All math operations will be: a (operation) b
+
+
+    function add(a,b){
+        return a+b
+    }
+
+    function divide(a,b){
+        return a/b
+    }
+
+    function multiply(a,b){
+        return a*b
+    }
+
+    function mod(a,b){
+        return a%b
+    }
+
+    function exponent(a,b){
+        return a**b
+    }
+
+    function subt(a,b){
+        return a-b
+    }
 
 
 
