@@ -2459,7 +2459,14 @@
 
     const monkeyCount1 = n => Array.from({length:n}, (_,i)=>++i)
 
-    console.log(monkeyCount1(5))
+    // console.log(monkeyCount1(5))
+
+
+    // Solution with "destructuring"
+
+    const monkeyCount2 = n => [...Array(n)].map((_,i)=>++i)
+
+    console.log(monkeyCount2(5))
 
 
 
