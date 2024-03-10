@@ -2466,7 +2466,15 @@
 
     const monkeyCount2 = n => [...Array(n)].map((_,i)=>++i)
 
-    console.log(monkeyCount2(5))
+    // console.log(monkeyCount2(5))
+
+
+    // Solution with "destructuring and Keys"
+
+    const monkeyCount3 = n => [...Array(n).keys()]
+
+
+    console.log(monkeyCount3(5))
 
 
 
