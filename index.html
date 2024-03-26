@@ -2494,11 +2494,21 @@
 
     const  replace= (s)=> s.replace(/[aeiou]/ig,"!" )
 
-    console.log(replace("Hi!"))
-    console.log(replace("!Hi! Hi!"))
-    console.log(replace("aeiou"))
-    console.log(replace("ABCDE"))
+    // console.log(replace("Hi!"))
+    // console.log(replace("!Hi! Hi!"))
+    // console.log(replace("aeiou"))
+    // console.log(replace("ABCDE"))
 
+
+    // Remove exclamation marks
+
+    // DESCRIPTION:
+    //
+    // Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+    const removeExclamationMarks=(str)=>str.replaceAll("!","")
+
+    console.log(removeExclamationMarks("Hello World!"));
 
 </script>
 
