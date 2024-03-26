@@ -2474,8 +2474,30 @@
     const monkeyCount3 = n => [...Array(n).keys()]
 
 
-    console.log(monkeyCount3(5))
+    // console.log(monkeyCount3(5))
 
+
+    // Exclamation marks series #11: Replace all vowel to exclamation
+
+    // DESCRIPTION:
+
+    // Description:
+    //
+    // Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+    //
+    // Examples
+    //
+    // replace("Hi!") === "H!!"
+    // replace("!Hi! Hi!") === "!H!! H!!"
+    // replace("aeiou") === "!!!!!"
+    // replace("ABCDE") === "!BCD!"
+
+    const  replace= (s)=> s.replace(/[aeiou]/ig,"!" )
+
+    console.log(replace("Hi!"))
+    console.log(replace("!Hi! Hi!"))
+    console.log(replace("aeiou"))
+    console.log(replace("ABCDE"))
 
 
 </script>
