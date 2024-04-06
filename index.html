@@ -2589,12 +2589,31 @@
         return res
     }
 
+    // console.log(well(['bad', 'bad', 'bad']))
+    // console.log(well(['good', 'bad', 'bad', 'bad', 'bad']))
+    // console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']))
 
 
+    ////////// Beginner - Reduce but Grow
 
-    console.log(well(['bad', 'bad', 'bad']))
-    console.log(well(['good', 'bad', 'bad', 'bad', 'bad']))
-    console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']))
+    // DESCRIPTION:
+    //
+    // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+    //
+    // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+    // My version
+    const grow = arr => arr.reduce((acc,el)=>acc*el)
+
+    console.log(grow([1, 2, 3, 4]))
+
+    // Version with eval
+    const grow1 = arr => eval(arr.join("*"))
+
+
+    console.log(grow1([1, 2, 3, 4]))
+
+
 
 
     ///////////////////////////////// not finished
