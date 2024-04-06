@@ -2540,7 +2540,7 @@
     // We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
     // Advanced users may find this extremely easy and can easily write this in one line.
 
-    sum = (numbers) => numbers.reduce((acc, el) => acc + el,0)
+    sum = (numbers) => numbers.reduce((acc, el) => acc + el, 0)
 
     // console.log(sum([1, 5.2, 4, 0, -1]))
     // console.log(sum([]))
@@ -2560,10 +2560,57 @@
     // Note! The input is a Real number (actual type is language dependent) and is >= 0.
     // The result should be an Integer.
 
-    const cockroachSpeed =(S)=>~~(S*10**5/60**2)
+    const cockroachSpeed = (S) => ~~(S * 10 ** 5 / 60 ** 2)
 
-    console.log(cockroachSpeed(1.08))
+    // console.log(cockroachSpeed(1.08))
 
+
+    ////////// Well of Ideas - Easy Version
+    //
+    // DESCRIPTION:
+    //
+    // For every good kata idea there seem to be quite a few bad ones!
+    //
+    // In this kata you need to check the provided array (x)
+    // for good ideas 'good' and bad ideas 'bad'.
+    // If there are one or two good ideas, return 'Publish!',
+    // if there are more than 2 return 'I smell a series!'.
+    // If there are no good ideas, as is often the case, return 'Fail!'.
+
+
+    const well = x => {
+        const count = x.filter(el => el === "good").length
+        let res = 'Fail!'
+        if (count > 2) {
+            res = 'I smell a series!'
+        } else if (count > 0) {
+            res = 'Publish!'
+        }
+        return res
+    }
+
+
+
+
+    console.log(well(['bad', 'bad', 'bad']))
+    console.log(well(['good', 'bad', 'bad', 'bad', 'bad']))
+    console.log(well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']))
+
+
+    ///////////////////////////////// not finished
+    // Rock Paper Scissors!
+
+    // DESCRIPTION:
+
+    // Rock Paper Scissors
+    //
+    // Let's play! You have to return which player won! In case of a draw return Draw!.
+    //
+    // Examples(Input1, Input2 --> Output):
+    //
+    // "scissors", "paper" --> "Player 1 won!"
+    // "scissors", "rock" --> "Player 2 won!"
+    // "paper", "paper" --> "Draw!"
 
 
 </script>
