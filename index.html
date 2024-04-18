@@ -2722,23 +2722,50 @@
     ///// My Solution
     const powersOfTwo = n => {
         let res = []
-        for (let i = 0; i <=n; i++) {
-            res.push(2**i)
+        for (let i = 0; i <= n; i++) {
+            res.push(2 ** i)
         }
         return res
     }
 
-    console.log(powersOfTwo(2))
-    console.log(powersOfTwo(0))
+    // console.log(powersOfTwo(2))
+    // console.log(powersOfTwo(0))
 
 
     ///// Better solution
 
-    const powersOfTwo1 = n => Array.from({length:n+1}, (_,i)=>2**i)
+    const powersOfTwo1 = n => Array.from({length: n + 1}, (_, i) => 2 ** i)
     // const powersOfTwo1 = n => [...Array(n+1)].map((_,i)=>2**i)
 
 
-    console.log(powersOfTwo1(2))
+    // console.log(powersOfTwo1(2))
+
+
+    ////////// Count of positives / sum of negatives
+
+    // DESCRIPTION:
+    //
+    // Given an array of integers.
+    //
+    // Return an array, where the first element is the count of positives numbers
+    // and the second element is sum of negative numbers. 0 is neither positive nor negative.
+    //
+    // If the input is an empty array or is null, return an empty array.
+    //
+    // Example
+    //
+    // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+    ///// My solution
+
+    const countPositivesSumNegatives = arr => {
+        if (!arr || arr.filter(el => el !== 0).length === 0) return []
+        return [arr.reduce((acc, el) => el > 0 ? acc + 1 : acc, 0), arr.reduce((acc, el) => el < 0 ? acc + el : acc, 0)]
+    }
+
+    console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+    console.log(countPositivesSumNegatives([0, 0]))
+    console.log(countPositivesSumNegatives())
 
 
     ///////////////////////////////// not finished
