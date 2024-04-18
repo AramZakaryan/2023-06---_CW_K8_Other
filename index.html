@@ -2697,12 +2697,48 @@
 
     const cubeChecker = (volume, side) => volume > 0 && side > 0 && volume / side / side === side
 
-    console.log(cubeChecker(8, 3))
-    console.log(cubeChecker(8, 2))
-    console.log(cubeChecker(-8, -2))
-    console.log(cubeChecker(0, 0))
-    console.log(cubeChecker(1, 5))
-    console.log(cubeChecker(125, 5))
+    // console.log(cubeChecker(8, 3))
+    // console.log(cubeChecker(8, 2))
+    // console.log(cubeChecker(-8, -2))
+    // console.log(cubeChecker(0, 0))
+    // console.log(cubeChecker(1, 5))
+    // console.log(cubeChecker(125, 5))
+
+
+    ////////// Powers of 2
+
+    // DESCRIPTION:
+
+    // Complete the function that takes a non-negative integer n as input,
+    // and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+
+    // Examples
+
+    // n = 0  ==> [1]        # [2^0]
+    // n = 1  ==> [1, 2]     # [2^0, 2^1]
+    // n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+
+    ///// My Solution
+    const powersOfTwo = n => {
+        let res = []
+        for (let i = 0; i <=n; i++) {
+            res.push(2**i)
+        }
+        return res
+    }
+
+    console.log(powersOfTwo(2))
+    console.log(powersOfTwo(0))
+
+
+    ///// Better solution
+
+    const powersOfTwo1 = n => Array.from({length:n+1}, (_,i)=>2**i)
+    // const powersOfTwo1 = n => [...Array(n+1)].map((_,i)=>2**i)
+
+
+    console.log(powersOfTwo1(2))
 
 
     ///////////////////////////////// not finished
